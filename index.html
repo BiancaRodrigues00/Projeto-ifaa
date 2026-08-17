@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Saúde Visual</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="modo-normal">
+
+  <!-- ACESSIBILIDADE -->
+  <div class="acessibilidade">
+    <button id="btn-zoom-out" aria-label="Diminuir tamanho do texto">A−</button>
+    <button id="btn-zoom-in" aria-label="Aumentar tamanho do texto">A+</button>
+    <button id="btn-modo-escuro" aria-label="Ativar modo escuro">
+      🌙
+    </button>
+  </div>
+
+
+  <!-- =========================
+       PÁGINA INICIAL
+  ========================== -->
+  <section id="tela-inicial" class="pagina-inicial">
+
+    <div class="hero">
+
+      <div class="hero-conteudo">
+
+        <div class="etiqueta">
+          👁 Saúde Visual
+        </div>
+
+        <h1>
+          Entenda melhor
+          <span>a sua visão.</span>
+        </h1>
+
+        <p>
+          Descubra informações sobre miopia, daltonismo e astigmatismo
+          através de uma experiência educativa, acessível e interativa.
+        </p>
+
+        <div class="hero-botoes">
+          <a href="#condicoes" class="btn-principal">
+            Conhecer condições
+            <span>→</span>
+          </a>
+
+          <button id="btn-iniciar-teste" class="btn-secundario">
+            Fazer mini-teste
+          </button>
+        </div>
+
+        <div class="hero-estatisticas">
+          <div>
+            <strong>03</strong>
+            <span>Condições visuais</span>
+          </div>
+
+          <div>
+            <strong>10</strong>
+            <span>Perguntas rápidas</span>
+          </div>
+
+          <div>
+            <strong>100%</strong>
+            <span>Educativo</span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+
+        <div class="olho-ilustracao">
+          <div class="olho-brilho"></div>
+          <div class="iris">
+            <div class="pupila"></div>
+          </div>
+        </div>
+
+        <div class="info-flutuante card-1">
+          <span>👓</span>
+          <div>
+            <strong>Miopia</strong>
+            <small>Visão de longe</small>
+          </div>
+        </div>
+
+        <div class="info-flutuante card-2">
+          <span>🎨</span>
+          <div>
+            <strong>Daltonismo</strong>
+            <small>Percepção das cores</small>
+          </div>
+        </div>
+
+        <div class="info-flutuante card-3">
+          <span>✨</span>
+          <div>
+            <strong>Astigmatismo</strong>
+            <small>Foco da imagem</small>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONDIÇÕES -->
+    <section id="condicoes" class="condicoes-section">
+
+      <div class="section-titulo">
+        <span>EXPLORE</span>
+        <h2>Conheça algumas condições visuais</h2>
+        <p>
+          Escolha uma opção para conhecer seus sintomas, causas
+          e formas de tratamento.
+        </p>
+      </div>
+
+
+      <div class="condicoes-grid">
+
+        <button class="condicao-card azul" data-condicao="miopia">
+          <div class="icone-condicao">👓</div>
+
+          <div>
+            <span class="numero-card">01</span>
+            <h3>Miopia</h3>
+            <p>
+              Dificuldade para enxergar objetos que estão distantes.
+            </p>
+          </div>
+
+          <span class="seta-card">→</span>
+        </button>
+
+
+        <button class="condicao-card roxo" data-condicao="daltonismo">
+          <div class="icone-condicao">🎨</div>
+
+          <div>
+            <span class="numero-card">02</span>
+            <h3>Daltonismo</h3>
+            <p>
+              Alteração na percepção e diferenciação de determinadas cores.
+            </p>
+          </div>
+
+          <span class="seta-card">→</span>
+        </button>
+
+
+        <button class="condicao-card laranja" data-condicao="astigmatismo">
+          <div class="icone-condicao">✨</div>
+
+          <div>
+            <span class="numero-card">03</span>
+            <h3>Astigmatismo</h3>
+            <p>
+              Pode causar visão borrada ou distorcida em diferentes distâncias.
+            </p>
+          </div>
+
+          <span class="seta-card">→</span>
+        </button>
+
+      </div>
+
+
+      <div class="teste-banner">
+
+        <div>
+          <span class="banner-tag">EXPERIMENTE</span>
+          <h2>Quer testar sua percepção visual?</h2>
+          <p>
+            Responda 10 perguntas simples e receba um feedback educativo.
+          </p>
+        </div>
+
+        <button id="btn-iniciar-teste-2">
+          Começar teste →
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <footer class="rodape-inicial">
+      <p>© 2026 Saúde Visual</p>
+
+      <a
+        href="https://fundacaodorina.org.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Saiba mais sobre acessibilidade visual →
+      </a>
+    </footer>
+
+  </section>
+
+
+
+  <!-- =========================
+       MINI TESTE
+  ========================== -->
+  <section id="tela-teste" class="escondido">
+
+    <div class="teste-header">
+
+      <button id="btn-voltar-inicio" class="btn-voltar">
+        ← Voltar
+      </button>
+
+      <div class="teste-introducao">
+        <span>MINI-TESTE</span>
+        <h1>Como está sua visão?</h1>
+        <p>
+          Responda às perguntas abaixo. O resultado é apenas educativo
+          e não substitui uma avaliação profissional.
+        </p>
+      </div>
+
+    </div>
+
+
+    <main class="container-teste">
+
+      <form id="form-quiz">
+
+        <div id="perguntas-container"></div>
+
+        <button
+          type="button"
+          id="btn-resultado-quiz"
+          class="btn-principal btn-largo"
+        >
+          Ver meu feedback →
+        </button>
+
+      </form>
+
+
+      <div id="resultado-quiz" class="resultado escondido">
+
+        <div class="resultado-icone">✓</div>
+
+        <div>
+          <span>SEU RESULTADO</span>
+          <h2>Feedback educativo</h2>
+          <p id="texto-feedback"></p>
+        </div>
+
+        <button id="btn-refazer-quiz">
+          Refazer teste
+        </button>
+
+      </div>
+
+    </main>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTEÚDO PRINCIPAL
+  ========================== -->
+  <div id="conteudo-principal" class="escondido">
+
+    <header class="cabecalho-site">
+
+      <a href="#" class="logo-site" id="logo-voltar">
+        <span class="logo-icone">◉</span>
+        <span>Saúde<span>Visual</span></span>
+      </a>
+
+
+      <nav class="menu-navegacao">
+        <a href="#oque-e">O que é</a>
+        <a href="#causas">Causas</a>
+        <a href="#sintomas">Sintomas</a>
+        <a href="#tratamento">Tratamento</a>
+        <a href="#simulador">Simulador</a>
+      </nav>
+
+
+      <button id="btn-voltar-principal" class="btn-header">
+        ← Início
+      </button>
+
+    </header>
+
+
+    <!-- HERO DA CONDIÇÃO -->
+    <section class="condicao-hero">
+
+      <div class="condicao-hero-conteudo">
+
+        <span class="condicao-tag">
+          SAÚDE VISUAL
+        </span>
+
+        <h1 id="titulo-condicao">
+          Miopia
+        </h1>
+
+        <p id="resumo-condicao">
+          Entenda como essa condição pode afetar a visão.
+        </p>
+
+        <a href="#oque-e" class="btn-principal">
+          Explorar conteúdo ↓
+        </a>
+
+      </div>
+
+
+      <div class="condicao-hero-ilustracao">
+
+        <div class="circulo-visual"></div>
+
+        <div class="icone-olho">
+          👁
+        </div>
+
+        <div class="mini-info">
+          Informação<br>
+          acessível
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <main class="conteudo-site">
+
+
+      <!-- O QUE É -->
+      <section id="oque-e" class="conteudo-bloco destaque-bloco">
+
+        <div class="numero-secao">01</div>
+
+        <div class="texto-bloco">
+          <span class="mini-titulo">ENTENDENDO</span>
+          <h2>O que é?</h2>
+          <p id="texto-oque-e"></p>
+        </div>
+
+        <div class="bloco-visual azul-visual">
+          <span>👁</span>
+          <small>VISÃO</small>
+        </div>
+
+      </section>
+
+
+      <!-- CAUSAS -->
+      <section id="causas" class="conteudo-bloco invertido">
+
+        <div class="bloco-visual roxo-visual">
+          <span>🔬</span>
+          <small>COMO ACONTECE</small>
+        </div>
+
+        <div class="texto-bloco">
+
+          <div class="numero-secao">02</div>
+
+          <span class="mini-titulo">ENTENDA</span>
+          <h2>Principais causas</h2>
+
+          <p id="texto-causas"></p>
+
+        </div>
+
+      </section>
+
+
+      <!-- SINTOMAS -->
+      <section id="sintomas" class="sintomas-section">
+
+        <div class="section-titulo esquerda">
+
+          <span>03 — IDENTIFIQUE</span>
+
+          <h2>Quais são os sintomas?</h2>
+
+          <p>
+            Alguns sinais podem aparecer no dia a dia.
+            Conheça os mais comuns.
+          </p>
+
+        </div>
+
+
+        <div id="lista-sintomas" class="sintomas-grid"></div>
+
+      </section>
+
+
+      <!-- TRATAMENTO -->
+      <section id="tratamento" class="tratamento-section">
+
+        <div class="tratamento-visual">
+
+          <div class="tratamento-circulo">
+            ❤️
+          </div>
+
+        </div>
+
+
+        <div class="tratamento-conteudo">
+
+          <span>04 — CUIDADOS</span>
+
+          <h2>Tratamento e cuidados</h2>
+
+          <p id="texto-tratamento"></p>
+
+          <div class="aviso-medico">
+            <strong>Importante</strong>
+
+            <p>
+              Este conteúdo possui finalidade educativa.
+              Somente um profissional de saúde pode realizar
+              uma avaliação e indicar o tratamento adequado.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- SIMULADOR -->
+      <section id="simulador" class="simulador-section">
+
+        <div class="simulador-header">
+
+          <div>
+            <span>EXPERIÊNCIA INTERATIVA</span>
+
+            <h2>
+              Veja como diferentes
+              alterações podem afetar a visão.
+            </h2>
+          </div>
+
+          <p>
+            Escolha um efeito e observe a imagem abaixo.
+          </p>
+
+        </div>
+
+
+        <div class="simulador-controles">
+
+          <button id="sim-miopia" class="btn-simulacao">
+            👓 Miopia
+          </button>
+
+          <button id="sim-daltonismo" class="btn-simulacao">
+            🎨 Daltonismo
+          </button>
+
+          <button id="sim-astigmatismo" class="btn-simulacao">
+            ✨ Astigmatismo
+          </button>
+
+          <button id="sim-reset" class="btn-simulacao reset">
+            Visão normal
+          </button>
+
+        </div>
+
+
+        <div class="imagem-simulador">
+
+          <div class="imagem-overlay">
+            <span>SIMULAÇÃO VISUAL</span>
+          </div>
+
+          <img
+            class="imagem-teste"
+            src="imagem-teste.png"
+            alt="Cena urbana utilizada para demonstração do simulador visual"
+            onerror="this.style.display='none'; this.parentElement.classList.add('sem-imagem')"
+          >
+
+          <div class="fallback-imagem">
+            <span>👁</span>
+            <p>
+              Adicione sua imagem em
+              <strong>imagem-teste.png</strong>
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="rodape-site">
+
+      <div class="rodape-logo">
+        <span class="logo-icone">◉</span>
+        SaúdeVisual
+      </div>
+
+      <p>
+        Projeto educativo sobre saúde da visão.
+      </p>
+
+      <small>
+        Este site não substitui uma consulta com um médico oftalmologista.
+      </small>
+
+    </footer>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
