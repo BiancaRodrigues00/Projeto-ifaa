@@ -1580,7 +1580,7 @@ body.modo-escuro .info-flutuante,
 body.modo-escuro .icone-olho,
 body.modo-escuro .tratamento-circulo {
   background: #101b2d;
-  color: white;
+  color: rgb(114, 24, 231);
 }
 
 body.modo-escuro .condicao-hero {
