@@ -627,4 +627,48 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("sim-reset")
     .addEventListener("click", limparSimulacoes);
 
+      /* =========================================================
+     PUPILA SEGUINDO O MOUSE
+  ========================================================= */
+
+  const olho = document.querySelector(".olho-ilustracao");
+  const pupila = document.querySelector(".pupila");
+
+  if (olho && pupila) {
+
+    document.addEventListener("mousemove", (event) => {
+
+      const rect = olho.getBoundingClientRect();
+
+      // Centro do olho
+      const centroX = rect.left + rect.width / 2;
+      const centroY = rect.top + rect.height / 2;
+
+      // Distância do mouse em relação ao centro
+      const mouseX = event.clientX - centroX;
+      const mouseY = event.clientY - centroY;
+
+      // Ângulo entre o centro do olho e o mouse
+      const angulo = Math.atan2(mouseY, mouseX);
+
+      // Distância máxima que a pupila poderá se mover
+      const distanciaMaxima = 35;
+
+      // Distância real até o mouse
+      const distancia = Math.min(
+        Math.sqrt(mouseX * mouseX + mouseY * mouseY),
+        distanciaMaxima
+      );
+
+      // Calcula a posição da pupila
+      const x = Math.cos(angulo) * distancia;
+      const y = Math.sin(angulo) * distancia;
+
+      pupila.style.transform =
+        `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+
+    });
+
+  }
+
 });
